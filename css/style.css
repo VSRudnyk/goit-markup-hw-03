@@ -19,6 +19,14 @@
   --font-size-36: 36px;
   --font-size-44: 44px;
 }
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -27,6 +35,8 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
@@ -44,6 +54,10 @@ body {
 .logo-blue {
   color: var(--accent-color);
 }
+.auth.list {
+  outline: 1px solid tomato;
+  margin: 0;
+}
 
 /* Button */
 .btn {
@@ -53,6 +67,8 @@ body {
   letter-spacing: 0.06em;
   border-radius: 4px;
   cursor: pointer;
+  padding: 10px 32px;
+  text-align: center;
 }
 
 .btn:hover,
@@ -76,8 +92,11 @@ body {
   color: var(--white-text-color);
 }
 /* Site nav */
-.site-nav {
-  display: flex;
+.conteiner {
+  outline: 1px solid tomato;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-nav-items:not(:last-child) {
@@ -116,6 +135,12 @@ body {
   letter-spacing: 0.02em;
 }
 /* Hero */
+.hero {
+  outline: 1px solid red;
+  margin: 0;
+  margin-bottom: 94px;
+  text-align: center;
+}
 .hero-title {
   font-weight: var(--font-weight-900);
   font-size: var(--font-size-44);
@@ -123,21 +148,29 @@ body {
   letter-spacing: 0.06em;
   color: var(--white-text-color);
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
   /* Временно добавил задний фон, так как цвет шрифта белый */
   background-color: var(--hero-bg-color);
 }
 /* Section */
 .section-title {
+  margin: 0;
+  margin-bottom: 50px;
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-36);
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-
 /* Features */
 .title {
+  margin: 0;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.feature-list {
+  margin-bottom: 94px;
 }
 .feature-list .title {
   font-weight: var(--font-weight-700);
@@ -146,13 +179,17 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
 .feature-list .description {
+  margin: 0;
   font-size: var(--font-size-14);
-  line-height: 1.71px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
-
+.employment-list {
+  margin-bottom: 94px;
+}
 /* Team */
 .name {
   font-weight: var(--font-weight-500);
