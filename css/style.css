@@ -1,0 +1,141 @@
+/* Цвет основного текста: #212121 */
+/* Цвет вторичного текста: #757575 */
+/* Белый цвет текста: #ffffff */
+/* Акцент: #2196F3; */
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --white-text-color: #ffffff;
+  --black-text-color: #000000;
+  --accent-color: #2196f3;
+  --primary-bg-color: #ffffff;
+  --btn-bg-color: #f5f4fa;
+  --hero-bg-color: #2f303a;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', sans-serif;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--black-text-color);
+  font-family: 'Raleway', sans-serif;
+}
+.logo-blue {
+  color: var(--accent-color);
+}
+
+/* Button */
+.hero .btn {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+}
+
+/* Site nav */
+.site-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.contacts {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+.contacts.link:hover,
+.contacts.link:focus {
+  color: var(--accent-color);
+}
+.site-nav .current {
+  color: var(--accent-color);
+}
+.auth {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+/* Hero */
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+  background-color: var(--hero-bg-color);
+}
+/* Section */
+.section-title {
+  color: var(--primary-text-color);
+  font-size: 36px;
+}
+
+/* Features */
+.feature-list .title {
+  color: var(--primary-text-color);
+  font-size: 14px;
+}
+.feature-list .description {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+/* Team */
+.name {
+  color: var(--primary-text-color);
+  font-size: 16px;
+}
+.post {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--hero-bg-color);
+}
+.address-block .address {
+  color: var(--white-text-color);
+  font-size: 14px;
+}
+.address-block {
+  font-style: normal;
+}
+.address-block > .contacts {
+  color: var(--secondary-text-color);
+}
+.address:hover,
+.address:focus {
+  color: var(--accent-color);
+}
+.footer .logo.link {
+  color: var(--white-text-color);
+}
