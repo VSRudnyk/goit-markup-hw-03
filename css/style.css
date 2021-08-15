@@ -76,6 +76,13 @@ body {
   color: var(--white-text-color);
 }
 /* Site nav */
+.site-nav {
+  display: flex;
+}
+
+.site-nav-items:not(:last-child) {
+  margin-right: 50px;
+}
 .site-nav .link {
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-14);
