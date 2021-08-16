@@ -8,6 +8,7 @@
   --primary-bg-color: #ffffff;
   --btn-bg-color: #f5f4fa;
   --hero-bg-color: #2f303a;
+  --card-bg-color: #ffffff;
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-700: 700;
@@ -18,6 +19,7 @@
   --font-size-26: 26px;
   --font-size-36: 36px;
   --font-size-44: 44px;
+  --card-set-gap: 30px;
 }
 html {
   box-sizing: border-box;
@@ -41,19 +43,50 @@ body {
 .link {
   text-decoration: none;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Section */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-36);
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-align: center;
+}
+.conteiner {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /* -----------------------------------Header-------------------------------- */
 
 /* Main-nav */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header .main-nav {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 
 /* Logo */
 
 .logo {
-  margin-right: 93px;
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-26);
   line-height: 1.19;
@@ -63,13 +96,6 @@ body {
 }
 .logo-blue {
   color: var(--accent-color);
-}
-.auth.list {
-  margin: 0;
-  margin-left: auto;
-}
-.auth.list .items + .items {
-  margin-left: 50px;
 }
 
 /* Button */
@@ -91,19 +117,13 @@ body {
 }
 
 /* Site nav */
-.conteiner {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 .site-nav .items + .items {
   margin-left: 50px;
 }
 .site-nav {
   display: flex;
+  margin-left: 93px;
 }
 
 .site-nav .link {
@@ -136,12 +156,20 @@ body {
   color: var(--accent-color);
 }
 
+/* Authorization navigation */
 .auth {
   display: flex;
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-14);
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.auth.list {
+  margin: 0;
+  margin-left: auto;
+}
+.auth.list .items + .items {
+  margin-left: 50px;
 }
 /* Hero */
 .hero {
@@ -159,32 +187,28 @@ body {
   margin: 0;
   margin-bottom: 30px;
 }
-/* Section */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
-.section-title {
-  margin: 0;
-  margin-bottom: 50px;
-  font-weight: var(--font-weight-700);
-  font-size: var(--font-size-36);
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-}
-/* Features */
+/* --------------------- Peculiarities ------------------- */
 .peculiarities {
   padding-top: 94px;
 }
-.title {
+
+.peculiarities-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.peculiarities-list .item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+}
+.peculiarities-list .title {
   margin: 0;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
-.feature-list .title {
+.peculiarities .title {
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-14);
   line-height: 1.15;
@@ -192,7 +216,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.feature-list .description {
+.peculiarities .description {
   margin: 0;
   font-size: var(--font-size-14);
   line-height: 1.71;
@@ -200,7 +224,35 @@ body {
   color: var(--secondary-text-color);
 }
 
-/* Team */
+/*------------------- What are we doing -------------------*/
+.employment-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-set-gap));
+}
+
+.employment-list .item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-right: var(--card-set-gap);
+}
+
+/* -------------------------- Team ----------------------- */
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-set-gap));
+}
+
+.team-list .item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-right: var(--card-set-gap);
+  background-color: var(--card-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .name {
   margin: 0;
   margin-bottom: 10px;
@@ -209,27 +261,31 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  text-align: center;
 }
 
 .post {
   margin: 0;
-
+  margin-bottom: 30px;
   font-size: var(--font-size-16);
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  text-align: center;
 }
-.post.team:not(:last-child) {
+.team-list .post + .post {
   margin-bottom: 30px;
 }
 .section.bgc {
   background-color: var(--btn-bg-color);
 }
 
-/* Footer */
 .team-img {
   margin-bottom: 30px;
 }
+
+/* --------------------- Footer -----------------------------*/
+
 .footer {
   background-color: var(--hero-bg-color);
 }
@@ -237,6 +293,7 @@ body {
   color: var(--white-text-color);
 }
 .address-block {
+  margin-top: 20px;
   font-style: normal;
   font-weight: var(--font-weight-400);
   font-size: var(--font-size-14);
@@ -256,7 +313,6 @@ body {
 }
 .footer .logo.link {
   color: var(--white-text-color);
-  pa-bottom: 20px;
 }
 
 /* ----------------------------Portfolio------------------------- */
