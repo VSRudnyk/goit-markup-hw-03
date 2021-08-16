@@ -41,9 +41,19 @@ body {
 .link {
   text-decoration: none;
 }
+/* -----------------------------------Header-------------------------------- */
+
+/* Main-nav */
+.header .main-nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
 
 /* Logo */
+
 .logo {
+  margin-right: 93px;
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-26);
   line-height: 1.19;
@@ -55,8 +65,11 @@ body {
   color: var(--accent-color);
 }
 .auth.list {
-  outline: 1px solid tomato;
   margin: 0;
+  margin-left: auto;
+}
+.auth.list .items + .items {
+  margin-left: 50px;
 }
 
 /* Button */
@@ -76,38 +89,32 @@ body {
   background-color: var(--accent-color);
   color: var(--white-text-color);
 }
-/* Button portfolio */
-.btn-portfolio {
-  font-weight: var(--font-weight-500);
-  font-size: var(--font-size-16);
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.btn-portfolio:hover,
-.btn-portfolio:focus {
-  background-color: var(--accent-color);
-  color: var(--white-text-color);
-}
 /* Site nav */
 .conteiner {
-  outline: 1px solid tomato;
-  width: 1170px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.site-nav-items:not(:last-child) {
-  margin-right: 50px;
+.site-nav .items + .items {
+  margin-left: 50px;
 }
+.site-nav {
+  display: flex;
+}
+
 .site-nav .link {
+  display: block;
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-14);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -128,7 +135,9 @@ body {
 .site-nav .current {
   color: var(--accent-color);
 }
+
 .auth {
+  display: flex;
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-14);
   line-height: 1.14;
@@ -136,10 +145,9 @@ body {
 }
 /* Hero */
 .hero {
-  outline: 1px solid red;
   margin: 0;
-  margin-bottom: 94px;
   text-align: center;
+  background-color: var(--hero-bg-color);
 }
 .hero-title {
   font-weight: var(--font-weight-900);
@@ -150,10 +158,13 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
-  /* Временно добавил задний фон, так как цвет шрифта белый */
-  background-color: var(--hero-bg-color);
 }
 /* Section */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-title {
   margin: 0;
   margin-bottom: 50px;
@@ -164,14 +175,15 @@ body {
   color: var(--primary-text-color);
 }
 /* Features */
+.peculiarities {
+  padding-top: 94px;
+}
 .title {
   margin: 0;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.feature-list {
-  margin-bottom: 94px;
-}
+
 .feature-list .title {
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-14);
@@ -187,41 +199,37 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
-.employment-list {
-  margin-bottom: 94px;
-}
+
 /* Team */
 .name {
+  margin: 0;
+  margin-bottom: 10px;
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-16);
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
 .post {
+  margin: 0;
+
   font-size: var(--font-size-16);
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+.post.team:not(:last-child) {
+  margin-bottom: 30px;
+}
+.section.bgc {
+  background-color: var(--btn-bg-color);
+}
 
-/* Our projects Portfolio */
-.name-portfolio {
-  font-weight: var(--font-weight-700);
-  font-size: var(--font-size-18);
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--primary-text-color);
-}
-.post-portfolio {
-  font-weight: var(--font-weight-400);
-  font-size: var(--font-size-16);
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-}
 /* Footer */
-/* Временно добавил задний фон, так как цвет шрифта белый */
+.team-img {
+  margin-bottom: 30px;
+}
 .footer {
   background-color: var(--hero-bg-color);
 }
@@ -248,4 +256,51 @@ body {
 }
 .footer .logo.link {
   color: var(--white-text-color);
+  pa-bottom: 20px;
+}
+
+/* ----------------------------Portfolio------------------------- */
+
+/* Button portfolio */
+.list-btn {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 34px;
+}
+.btn-portfolio {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-16);
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+}
+
+/* Our projects Portfolio */
+.list-projects {
+  list-style: none;
+  padding: 0%;
+}
+.name-portfolio {
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-18);
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+.post-portfolio {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-16);
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
