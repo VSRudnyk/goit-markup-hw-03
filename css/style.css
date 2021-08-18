@@ -75,7 +75,9 @@ img {
 /* -----------------------------------Header-------------------------------- */
 
 /* Main-nav */
-
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .header .main-nav {
   display: flex;
   align-items: center;
@@ -155,7 +157,8 @@ img {
   margin: 0;
   margin-right: auto;
   margin-left: auto;
-  padding: 200px 452px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   width: 1600px;
   text-align: center;
   background-color: var(--hero-bg-color);
@@ -167,7 +170,8 @@ img {
   letter-spacing: 0.06em;
   color: var(--white-text-color);
   text-transform: uppercase;
-  margin: 0;
+  width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -279,9 +283,6 @@ img {
   margin-bottom: 30px;
 }
 .section.bgc {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: var(--btn-bg-color);
 }
 
@@ -291,12 +292,11 @@ img {
 
 /* --------------------- Footer -----------------------------*/
 
-.footer .conteiner {
+.footer {
   background-color: var(--hero-bg-color);
-  width: 1600px;
 }
 .footer-block {
-  padding: 60px 1130px 60px 215px;
+  padding: 60px 0 60px 0;
 }
 .address-block .address {
   color: var(--white-text-color);
@@ -334,7 +334,7 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .list-btn .item + .item {
@@ -374,7 +374,6 @@ img {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-right: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
-  /* border: 1px solid #eeeeee; */
 }
 
 .name-portfolio {
