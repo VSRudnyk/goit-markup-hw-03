@@ -183,15 +183,11 @@ img {
   letter-spacing: 0.06em;
   border: none;
   border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
   cursor: pointer;
   padding: 10px 32px;
   text-align: center;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: var(--accent-color);
-  color: var(--white-text-color);
 }
 
 /* --------------------- Peculiarities ------------------- */
@@ -272,22 +268,23 @@ img {
 
 .post {
   margin: 0;
-  margin-bottom: 30px;
+
   font-size: var(--font-size-16);
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   text-align: center;
 }
+
+.card-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-list .post + .post {
   margin-bottom: 30px;
 }
 .section.bgc {
   background-color: var(--btn-bg-color);
-}
-
-.team-img {
-  margin-bottom: 30px;
 }
 
 /* --------------------- Footer -----------------------------*/
@@ -298,30 +295,41 @@ img {
 .footer-block {
   padding: 60px 0 60px 0;
 }
+
 .address-block .address {
   color: var(--white-text-color);
 }
 .address-block {
-  margin-top: 20px;
   font-style: normal;
   font-weight: var(--font-weight-400);
   font-size: var(--font-size-14);
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.address-block > .contacts-footer {
+.address-block:not(:last-child) {
+  margin-top: 9px;
+}
+.address-block .contacts-footer {
   color: var(--white-text-color-60);
 }
 .address:hover,
 .address:focus {
   color: var(--accent-color);
 }
+
 .contacts-footer:hover,
 .contacts-footer:focus {
   color: var(--accent-color);
 }
 .footer .logo.link {
   color: var(--white-text-color);
+}
+.footer-logo {
+  margin-bottom: 20px;
+}
+.contacts-address,
+.contacts-email {
+  margin-bottom: 9px;
 }
 
 /* ----------------------------Portfolio------------------------- */
